@@ -3,7 +3,7 @@ title: "Astro ブログを Cloudflare CDN にデプロイする"
 emoji: "😊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [cloudfalre]
-published: false
+published: true
 ---
 
 Astro は、ブログやマーケティング、eコマースなど、コンテンツ駆動のウェブサイトを作成するためのウェブフレームワークです。
@@ -41,10 +41,22 @@ Astro Blog を登録した Git リポジトリを登録する
 ## サイトを確認する
 
 - デプロイ完了後に、プロジェクトに進む
-- ドメインを確認: `ha1hai-blog.pages.dev`
+- 自動生成されたドメインドメインを確認: `ha1hai-blog.pages.dev`
   - ex: {project-name}.pages.dev
+- URLにアクセスし、サイトが表示されていることを確認する
   - <https://ha1hai-blog.pages.dev>
-- URLにアクセスにアクセス可能なことを確認する
+
+## サイトを更新する
+
+- GitHub リポジトリに変更を追加し、プロジェクションブランチ(今回は`main`を指定)を更新し、push
+- 自動で変更を検知した Cloudflare がデプロイを実行
+- URLにアクセスし、サイトが更新されていることを確認する
+  - <https://ha1hai-blog.pages.dev>
+
+## まとめ
+
+操作が簡単で、すぐに Cloudflare Pages へのデプロイが完了しました。やったことは、GitHub の対象リポジトリを指定し、ビルドコマンドを指定（今回はデフォルトの`npm run dev`を指定）しただけです。
+現在は、自動生成された Cloudflare のドメイン(`example.pages.dev`)上に構築されているため、次はカスタムドメインを有効にしてみたいと思います。
 
 ## 参考URL
 
