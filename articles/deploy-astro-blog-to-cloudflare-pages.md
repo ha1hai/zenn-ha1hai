@@ -2,7 +2,7 @@
 title: "Astro ブログを Cloudflare Pages にデプロイする"
 emoji: "😊"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [cloudfalre]
+topics: [Cloudflare]
 published: true
 ---
 
