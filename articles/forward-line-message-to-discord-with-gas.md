@@ -3,7 +3,7 @@ title: "Google App Script (GAS) を利用して、LINE のメッセージを Dis
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [line, discord, gas]
-published: false
+published: true
 ---
 
 ## はじめに
@@ -27,7 +27,7 @@ Google App Script (GAS) を利用して、LINE チャネルに入力したメッ
 ![](/images/2024-06-19/003.png)
 ![](/images/2024-06-19/004.png)
 
-## GAS スクリプトプロパティ 設定
+## GAS スクリプトプロパティ設定
 
 GAS スクリプトプロパティ（環境変数的なやつ）へ Discord の Webhook URL を登録します。  
 Discord の Webhook URL を変更した際にコードを直接修正しなくてもいいように、スクリプトプロパティの設定値から値を取得します。
@@ -52,6 +52,8 @@ Discord の Webhook URL を変更した際にコードを直接修正しなく�
 コードの既存の内容を削除し、新しいコードを貼り付けます。
 ![](/images/2024-06-19/009.png)
 ![](/images/2024-06-19/010.png)
+
+### コード
 
 以下のコードを貼り付けます。
 
@@ -134,7 +136,6 @@ LINE から GAS へメッセージが送信されると、 `doPost(e)` が実行
 デプロイが完了すると、ウェブアプリのURLが表示されるので、コピーします。
 ![](/images/2024-06-19/019.png)
 
-`https://script.google.com/macros/s/AKfycbz-zctXp5RtYoA_JqcuM06R0LV_0Ev3Ink0zeME61qjiwIqbLurgoRvddV6qcHp2vo/exec`
 これで GAS 側の設定は完了です。
 
 ## LINE チャネル作成
@@ -217,9 +218,9 @@ LINE Developers コンソールのチャネル画面に戻ってリロードす�
 - Discord への通知を確認
 ![](/images/2024-06-19/122.png)
 - GAS のプロジェクト画面の 実行数 を確認
-  - 開始時間が正しいことやステータスが`完了`となっていることを確認
-  サイドメニューから 実行数 を選択します。
+  - サイドメニューから 実行数 を選択します。
   ![](/images/2024-06-19/123.png)
+  - 開始時間が正しいことやステータスが`完了`となっていることを確認
   ![](/images/2024-06-19/124.png)
 
 ## まとめ
