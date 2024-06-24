@@ -122,6 +122,8 @@ LINE から GAS へメッセージが送信されると、 `doPost(e)` が実行
 
 ![](/images/2024-06-19/013.png)
 
+### GAS のアクセス許可
+
 :::message alert
 初回のデプロイ時には、 デプロイするウェブアプリからのアクセス許可を行う必要があります
 :::
@@ -180,7 +182,7 @@ LINE チャネルが作成できました。
 応答メッセージ、あいさつメッセージの変更は、別の管理画面 (LINE Official Account Manager) で行います。
 
 - Messaging API設定
-  - Webhook URL: `{自分の Discord の Webhook URL}`
+  - Webhook URL: `{GAS ウェブアプリの URL}`
     - Webhookの利用: `有効`
   - 応答メッセージ: `無効`
   - あいさつメッセージ: `無効`
@@ -188,7 +190,7 @@ LINE チャネルが作成できました。
 チャネルの Messaging API設定 をクリックします。
 ![](/images/2024-06-19/111.png)
 
-Webhook URL の 編集 から、Discord の Webhook URL を設定します。併せて、 Webhookの利用を `有効` にします。
+Webhook URL の編集 から、`GAS ウェブアプリの URL` を設定します。併せて、 Webhookの利用を `有効` にします。
 ![](/images/2024-06-19/112.png)
 ![](/images/2024-06-19/113.png)
 
