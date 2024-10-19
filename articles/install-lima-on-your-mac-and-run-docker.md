@@ -10,11 +10,11 @@ Mac に Lima をインストールして Docker を実行します。
 
 ## Docker インストール
 
-```zsh
+```bash
 brew intall docker
 ```
 
-```zsh
+```bash
 # 確認
 docker --version
 # Docker version 27.3.1, build ce1223035a
@@ -22,11 +22,11 @@ docker --version
 
 ## Lima インストール
 
-```zsh
+```bash
 brew install lima
 ```
 
-```zsh
+```bash
 limactl --version
 # limactl version 0.23.2
 
@@ -38,7 +38,7 @@ limactl help
 
 `Proceed with the current configuration`を選択する。
 
-```zsh
+```bash
 limactl start template://docker
 #  Creating an instance "default"  [Use arrows to move, type to filter]
 # >  Proceed with the current configuration
@@ -49,7 +49,7 @@ limactl start template://docker
 
 ## Lima VM 一覧
 
-```zsh
+```bash
 limactl list
 # NAME       STATUS     SSH                VMTYPE    ARCH       CPUS    MEMORY    DISK      DIR
 # default    Running    127.0.0.1:60022    qemu      aarch64    4       4GiB      100GiB    ~/.lima/default
@@ -57,14 +57,14 @@ limactl list
 
 ## Dockr
 
-```zsh
+```bash
 export DOCKER_HOST=$(limactl list default --format 'unix://{{.Dir}}/sock/docker.sock')
 docker run --rm hello-world
 ```
 
 ## Lima Help
 
-```zsh
+```bash
 limactl help
 ```
 
